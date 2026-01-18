@@ -1,0 +1,13 @@
+[project]
+name = "comfyui-sg-text-encode-reference-images"
+description = "Advanced Text Encode node for ComfyUI with dynamic multi-image reference support."
+version = "1.0.0"
+dependencies = []
+
+[project.urls]
+Repository = "https://github.com/sebagallo/comfyui-sg-text-encode-reference-images"
+
+[tool.comfy]
+PublisherId = "sebagallo"
+DisplayName = "Text Encode Reference Images"
+Icon = "https://raw.githubusercontent.com/sebagallo/comfyui-sg-text-encode-reference-images/master/assets/icon.png"
