@@ -1,7 +1,7 @@
 [project]
 name = "comfyui-sg-text-encode-reference-images"
 description = "Advanced Text Encode node for ComfyUI with dynamic multi-image reference support."
-version = "1.0.0"
+version = "2.0.0"
 dependencies = []
 
 [project.urls]
