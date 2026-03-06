@@ -8,12 +8,12 @@ Mainly for usage with Qwen Image / Flux 2 / Z-Image models.
 
 ## Nodes
 
-### Text Encode Reference Images (v2.0.0)
-This node allows you to provide a prompt along with multiple reference images that are dynamically handled. It supports multiple Vision-Language (VL) encoding strategies, CLIP Vision encoding, and reference latents.
+### Text Encode Reference Images (v3.0.0)
+This node allows you to provide a prompt along with reference images. It supports multiple Vision-Language (VL) encoding strategies, CLIP Vision encoding, and reference latents.
 
 - **Category**: `conditioning`
 - **Features**:
-  - **Stable Dynamic Image Slots**: Automatically adds a new `image` input slot when the last one is connected. Intermediate slots remain stable even if disconnected, preventing naming collisions.
+  - **Native Batch Support**: Supports image batches directly. To use multiple images, use the native ComfyUI **Batch Images** node to combine them.
   - **Selectable VL Strategies**: 
     - `none`: Standard text encoding without vision-language tokens.
     - `qwen image edit`: Uses hardcoded system templates for Qwen-style image editing.
@@ -28,7 +28,7 @@ This node allows you to provide a prompt along with multiple reference images th
   - `auto_resize_images`: (BOOLEAN) If enabled, resizes images to ~1MP for VAE encoding.
   - `vae` (Optional): VAE for encoding reference latents.
   - `image_encoder` (Optional): CLIP Vision model for image encoding.
-  - `image1`, `image2`, ...: Dynamic image inputs.
+  - `images` (Optional): Reference image(s). Use **Batch Images** to provide multiple.
 - **Output**:
   - `CONDITIONING`: The encoded conditioning data.
 
